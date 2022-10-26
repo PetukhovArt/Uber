@@ -37,6 +37,8 @@ nav {
   height: 84px;
   background-color: rgba(0, 0, 0, .6);
   /* только bg будет прозрачный при rgba */
+  position: absolute;
+  width: 100%;
 }
 
 .subheader_logo {
@@ -134,4 +136,66 @@ nav {
   color: #FFFFFF;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
   border: none;
+}
+
+.reasons_title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 48px;
+  text-align: center;
+  margin-top: 33px;
+}
+
+.reasons_subtitle {
+  background: black;
+  width: 113px;
+  height: 24px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.reasons_subtitle h3 {
+  font-weight: 400;
+  font-size: 11px;
+  color: white;
+  margin: 0;
+}
+
+.reasons {
+  margin-top: 30px;
+}
+
+.reason {
+  display: flex;
+  justify-content: center;
+  min-height: 150px;
+  margin-top: 10px;
+}
+
+.reason_logo_container {
+  background: rgba(30, 172, 199, 1);
+  border-radius: 50%;
+  width: 116px;
+  height: 116px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reason_descr {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 17px;
+  max-width: 371px;
+  margin-left: 30px;
+}
+
+.reason_descr h4 {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #1EACC7;
 }
