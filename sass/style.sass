@@ -1,5 +1,10 @@
-$color_blue: #1EACC7
+$main_color: #1EACC7
 $color_red: #FF5656
+@mixin btn_hover
+	&:hover
+		background: none
+		background-color: $color_red
+		transition: 0.4s
 
 *
 	font-family: 'Roboto', sans-serif
@@ -61,7 +66,7 @@ nav
 		text-transform: uppercase
 		text-decoration: none
 	&_btn
-		background: $color_blue
+		background: $main_color
 		box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
 		border-radius: 4px
 		width: 172px
@@ -72,6 +77,7 @@ nav
 		color: white
 		margin-top: 19px
 		border: none
+		@include btn_hover
 
 .promo
 	min-height: 799px
@@ -106,7 +112,7 @@ nav
 		margin: 118px auto 0 auto
 		width: 259px
 		height: 63px
-		background: $color_blue
+		background: $main_color
 		box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
 		border-radius: 4px
 		font-weight: 400
@@ -115,6 +121,7 @@ nav
 		color: #FFFFFF
 		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
 		border: none
+		@include btn_hover
 
 .title
 	font-weight: 700
@@ -156,7 +163,7 @@ nav
 		margin-right: 26px
 		width: 113px
 		height: 113px
-		background-color: $color_blue
+		background-color: $main_color
 		border-radius: 100%
 	&_descr
 		font-weight: 300
@@ -167,7 +174,7 @@ nav
 		font-weight: 400
 		font-size: 17px
 		line-height: 17px
-		color: $color_blue
+		color: $main_color
 
 .subtitle
 	font-weight: 400
@@ -215,14 +222,40 @@ nav
 		&_plus
 			background-color: black
 			border-radius: 100%
-			width: 29px
-			height: 29px
+			width: 26px
+			height: 26px
 			display: flex
 			position: absolute
 			bottom: 35px
 			left: 50%
 			transform: translateX(-50%)
 			padding: 6px
+			margin: 0 auto
+			&::before
+				content: ''
+				display: block
+				display: flex
+				width: 14px
+				height: 2px
+				background-color: $main_color
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				transition: 0.3s
+			&::after
+				content: ''
+				display: block
+				display: flex
+				width: 2px
+				height: 14px
+				background-color: $main_color
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				transition: 0.3s
+			&:hover
+				&:before, &::after
+					background-color: $color_red
 
 .choice
 	min-height: 898px
@@ -251,8 +284,148 @@ nav
 		min-height: 397px
 		padding-top: 209px
 		.subtitle_2
-			font-weight: 300;
-			font-size: 17px;
-			line-height: 24px;
+			font-weight: 300
+			font-size: 17px
+			line-height: 24px
 
+.require
+	padding: 68px 0 84px 0
+	&_block
+		margin: 33px 0
+		&_nmb
+			margin-bottom: 0px
+	&_title
+		font-weight: 400
+		font-size: 22px
+		line-height: 24px
+		color: $main_color
+	&_list
+		list-style-type: none
+		padding-left: 50px
+		margin-top: 22px
+		li
+			font-weight: 300
+			font-size: 17px
+			line-height: 24px
+			margin-bottom: 10px
+			position: relative
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				left: -32px
+				top: 3px
+				width: 20px
+				height: 20px
+				background: url('../assets/icons/check_blue.svg') center (center / cover) no-repeat
+	&_description
+		font-weight: 300
+		font-size: 17px
+		line-height: 24px
+		color: $main_color
+	.warning
+		.require_title
+			color: $color_red
+		.require_list
+			li
+				&::before
+					background: url('../assets/icons/check_red.svg') center (center / cover) no-repeat
 
+.world
+	position: relative
+	background: black
+	min-height: 720px
+	padding-top: 48px
+	.title, .subtitle
+		color: white
+	&_label
+		background: white
+		h3
+			color: black
+	&_bg
+		width: 1440px
+		min-height: 720px
+		position: absolute
+		top: 0
+		left: 241px
+		z-index: 1
+	.container
+		position: relative
+		z-index: 2
+
+.blue_link_item
+	display: block
+	margin-top: 456.5px
+	text-decoration: none
+	text-align: center
+	font-weight: 400
+	font-size: 15px
+	text-transform: uppercase
+	color: $main_color
+
+.footer
+	&_wrapper
+		border: 2px solid green
+		min-height: 133.5px
+		margin: 11px 23px
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+	&_wrapper>div
+		width: 33.3%
+		border: 1px solid red
+		&:nth-child(3)
+			display: flex
+			justify-content: flex-end
+		.social
+			margin-top: 37px
+		.links
+			text-align: center
+
+			&_line
+				height: 4px
+				width: 301px
+				border: 2px solid #1FBAD6
+				margin-top: 2px
+				opacity: 1
+				margin: 0 auto
+			&_main_item, &_sub_item
+				text-decoration: none
+				text-transform: uppercase
+				&:hover
+					color: red
+					text-decoration: underline
+				&:nth-last-child(1)
+					padding-right: 0
+			&_main_item
+				color: #070716
+				font-size: 15px
+				padding-right: 47px
+				margin-top: 34px
+			&_sub_item
+				color: #999999
+				font-size: 11px
+				font-weight: 300px
+				padding-right: 23px
+				margin-top: 15px
+			.link_sub
+				margin: 0
+				font-size: 11px
+				margin-top: 19px
+
+.store
+	&_item
+		text-decoration: none
+
+.fa
+	padding: 9px
+	font-size: 18px
+	width: 35px
+	text-align: center
+	text-decoration: none
+	margin: 2px 6px 2px 2px
+	border-radius: 50%
+	background: rgba(7, 7, 22, 1)
+	color: white
+	&:hover
+		opacity: 0.7
