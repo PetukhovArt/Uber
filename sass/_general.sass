@@ -19,6 +19,7 @@ nav
     &_item
         border-right: 2px dashed black
         padding-right: 28px
+        list-style-type: none
     &_link
         color: white
         font-size: 15px
@@ -320,25 +321,15 @@ nav
 
 .world
     position: relative
-    background: black
     min-height: 720px
     padding-top: 48px
+    background: url('../assets/img/map.png') center (center / cover) no-repeat
     .title, .subtitle
         color: white
     &_label
         background: white
         h3
             color: black
-    &_bg
-        position: absolute
-        top: 0
-        left: 50%
-        transform: translateX(-50%)
-        z-index: 1
-
-    .container
-        position: relative
-        z-index: 2
 
 .blue_link_item
     display: block

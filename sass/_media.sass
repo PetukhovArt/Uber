@@ -1,4 +1,4 @@
-@media screen and (max-width:1200px)
+@media (max-width:1200px)
     .menu
         &_item
             padding-right: 10px
@@ -16,8 +16,27 @@
         &_descr
             width: 300px
             font-size: 14px
+    .mobile
+        &_item
+            width: 300px
+            &_subtitle
+                font-size: 20px
+                padding: 5px
+    .require
+        &_title
+            font-size: 18px
+        &_list>li
+            font-size: 15px
+    .footer_wrapper>div
+        &:nth-child(3)
+            justify-content: center
+    .store
+        display: flex
+        flex-direction: column
+        gap: 10px
+        transform: translateX(40%)
 
-@media screen and (max-width:992px)
+@media (max-width:992px)
     .menu
         &_item
             padding-right: 8px
@@ -53,19 +72,19 @@
             h4
                 font-size: 15px
 
-@media screen and (max-width:767px)
+@media (max-width:767px)
     .menu
-        text-decoration: none
         position: fixed
-        top: 0
         left: -100%
+        top: 0
         width: 50%
         height: 100vh
         padding: 20px 15px
         flex-direction: column
         justify-content: center
+        align-items: center
         background-color: rgba(0,0,0, .8)
-        transition: 0.6s
+        transition: 1s
         &_active
             left: 0
         &_item
