@@ -52,9 +52,6 @@
         &_about
             font-size: 15px
     .subheader
-        &_logo
-            img
-                width: 100%
         &_official
             font-size: 12px
         &_number
@@ -90,8 +87,7 @@
     .require_list>li
         font-size: 13px
 
-
-@media (max-width:768px)
+@media (max-width:767px)
     .menu
         position: fixed
         left: -100%
@@ -102,7 +98,7 @@
         flex-direction: column
         justify-content: center
         align-items: center
-        background-color: rgba(0,0,0, .8)
+        background-color: rgba(0,0,0, .9)
         transition: 1s
         &_active
             left: 0
@@ -112,3 +108,154 @@
             margin: 10px 0
         &_link
             font-size: 20px
+    .burger
+        display: block
+        position: absolute
+        right: 11px
+        top: 50%
+        transform: translateY(-30%)
+        height: 14px
+        width: 26px
+        span
+            display: block
+            height: 2px
+            width: 100%
+            background-color: #fff
+            margin-bottom: 3px
+            transition: 0.5s all
+        &_active
+            span
+                margin-bottom: -1.5px
+                &:nth-child(1)
+                    transform: rotate(-45deg)
+                    background-color: #fd3c3c
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: rotate(45deg)
+                    background-color: #fd3c3c
+    .mobile_item_4, .mobile_item_5
+        margin-bottom: 19px
+
+@media (max-width:575px)
+    .xs-hidden
+        display: none
+    .subheader
+        &_logo
+            margin-top: 23px
+            img
+                width: 180px
+                height: 20px
+                display: block
+                margin: 0 auto
+        &_official
+            display: none
+        &_call
+            display: none
+        &_btn
+            width: 145px
+            height: 30px
+            font-weight: 400px
+            font-size: 13px
+            display: block
+            margin: 0 auto
+            margin-top: 5px
+        &_number
+            text-align: center
+            font-size: 15px
+            margin-top: 10px
+    .xs-visible
+        display: block
+    .promo
+        &_header
+            line-height: 45px
+            font-size: 40px
+        &_subheader
+            font-size: 30px
+    .reason
+        &_descr
+            text-align: center
+    .require
+        &_title
+            text-align: center
+        &_description
+            text-align: center
+
+    .footer
+        &_wrapper>div
+            .links
+                &_line
+                    width: 100%
+                &_main_item
+                    display: block
+                    padding: 1px
+                    margin: 0 auto
+                &_sub_item
+                    padding: 1px
+                    margin: 0 auto
+    .fa
+        padding: 14px
+        width: 50px
+
+@media (max-width:320px)
+    .subheader
+        height: 62px
+        &_logo
+            img
+                width: 130px
+                height: 15px
+                display: block
+                margin-top: 22px
+        &_btn
+            width: 110px
+            height: 22px
+            font-size: 10px
+            display: block
+            margin: 0 auto
+            margin-top: 5px
+        &_number
+            text-align: center
+            font-size: 12px
+            margin-top: 11px
+    .promo
+        min-height: 400px
+        padding: 103px 0 35px 0
+        &_about
+            display: none
+        &_header
+            line-height: 35px
+            font-size: 30px
+            margin-bottom: 0
+            padding: 0 24px
+        &_subheader
+            font-size: 20px
+            line-height: 25px
+            margin-bottom: 0
+            padding-bottom: 0
+        &_btn
+            margin-top: 73px
+            width: 210px
+            height: 50px
+            font-size: 16px
+            font-weight: 400px
+    .title
+        font-size: 16px
+        font-weight: 700
+        margin-top: 18px
+        &_descr
+
+    .require
+        &_title
+
+        &_description
+
+    .footer
+        &_wrapper>div
+            .links
+                &_line
+
+                &_main_item
+
+                &_sub_item
+
+    .fa
