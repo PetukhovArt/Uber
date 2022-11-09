@@ -1,2 +1,1 @@
-# Uber (Bootstrap)
- Bootstrap learning
+https://petukhovart.github.io/Uber/
