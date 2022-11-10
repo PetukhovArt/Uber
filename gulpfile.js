@@ -7,7 +7,7 @@ const rename = require("gulp-rename");
 
 gulp.task('server', function() {
 
-    browserSync.init({
+    browserSync({
         server: {
             baseDir: "src"
         }
